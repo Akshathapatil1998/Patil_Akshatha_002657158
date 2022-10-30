@@ -55,7 +55,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
             }
             else
             {
-                row[2] = "Patient Not Created";
+                row[2] = "  Doctor Not Created";
             }
             
             model.addRow(row);
@@ -80,6 +80,9 @@ private void populatePatientsTable(ArrayList<Person> personList) {
         jScrollPane1 = new javax.swing.JScrollPane();
         viewPersonsJTable = new javax.swing.JTable();
         createPatientJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         refreshJButton.setBackground(new java.awt.Color(0, 102, 102));
         refreshJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -89,6 +92,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 refreshJButtonActionPerformed(evt);
             }
         });
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, 100, 30));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,6 +102,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 30));
 
         searchPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         searchPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,6 +112,8 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 searchPatientJButtonActionPerformed(evt);
             }
         });
+        add(searchPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 333, 120, 30));
+        add(searchBoxJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 332, 130, 30));
 
         deletePatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         deletePatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,6 +123,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 deletePatientJButtonActionPerformed(evt);
             }
         });
+        add(deletePatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 110, 30));
 
         viewPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         viewPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -125,10 +133,12 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 viewPatientJButtonActionPerformed(evt);
             }
         });
+        add(viewPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 120, 30));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Doctors");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 490, -1));
 
         viewPersonsJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -151,6 +161,8 @@ private void populatePatientsTable(ArrayList<Person> personList) {
         });
         jScrollPane1.setViewportView(viewPersonsJTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 840, 170));
+
         createPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         createPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
         createPatientJButton.setText("Create Doctor");
@@ -159,55 +171,10 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 createPatientJButtonActionPerformed(evt);
             }
         });
+        add(createPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)
-                        .addComponent(searchPatientJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(createPatientJButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(viewPatientJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(deletePatientJButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(viewPatientJButton)
-                    .addComponent(deletePatientJButton)
-                    .addComponent(backJButton)
-                    .addComponent(createPatientJButton)
-                    .addComponent(refreshJButton))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchPatientJButton)
-                    .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(405, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Patient/doctorss.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 640));
     }// </editor-fold>//GEN-END:initComponents
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
@@ -249,7 +216,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
         Doctor Doctor=person.getDoctor();
         if(Doctor==null)
         {
-            JOptionPane.showMessageDialog(this, "Patient not created. Cannot delete",
+            JOptionPane.showMessageDialog(this, "Doctor not created. Cannot delete",
                 "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -272,7 +239,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
             return;
         }
         Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
-        /*pass userProcessContainer and Patient*/
+        /*pass userProcessContainer and Doctor*/
         Doctor doctor= person.getDoctor();
         if(doctor!=null)
         {
@@ -283,8 +250,8 @@ private void populatePatientsTable(ArrayList<Person> personList) {
         }
         else
         {
-            JOptionPane.showMessageDialog(this, "Patient not created, "
-                + "Please create Patient first.", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Doctor not created, "
+                + "Please create Doctor first.", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_viewPatientJButtonActionPerformed
@@ -298,9 +265,9 @@ private void populatePatientsTable(ArrayList<Person> personList) {
             return;
         }
         Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
-        if(person.getPatient()!=null)
+        if(person.getDoctor()!=null)
         {
-            JOptionPane.showMessageDialog(this, "Paient already exists.","Error",
+            JOptionPane.showMessageDialog(this, "Doctor already exists.","Error",
                 JOptionPane.ERROR_MESSAGE);
             return;
         }
@@ -316,6 +283,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
     private javax.swing.JButton createPatientJButton;
     private javax.swing.JButton deletePatientJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton refreshJButton;
     private javax.swing.JTextField searchBoxJTextField;

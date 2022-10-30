@@ -76,11 +76,11 @@ public class ViewUpdateVitalSignsJPanel extends javax.swing.JPanel {
         jLabel2.setText("Heart rate");
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        jLabel3.setText("Systolic blood pressure");
+        jLabel3.setText("Blood pressure");
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setText("Weight in pounds");
+        jLabel4.setText("Weight ");
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,7 +140,7 @@ public class ViewUpdateVitalSignsJPanel extends javax.swing.JPanel {
                         .addComponent(editVitalSignJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(saveJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

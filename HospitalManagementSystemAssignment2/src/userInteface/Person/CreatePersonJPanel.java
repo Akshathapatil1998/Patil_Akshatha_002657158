@@ -59,10 +59,13 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
         personhouse = new javax.swing.JTextField();
         personcommunity = new javax.swing.JTextField();
         personcity = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setMinimumSize(new java.awt.Dimension(500, 700));
         setPreferredSize(new java.awt.Dimension(500, 700));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        add(personAgeJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 150, -1));
 
         addPersonJButton.setBackground(new java.awt.Color(0, 102, 102));
         addPersonJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -72,17 +75,22 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                 addPersonJButtonActionPerformed(evt);
             }
         });
+        add(addPersonJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 320, 100, 36));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Person Details");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 446, -1));
 
         patientNameJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         patientNameJLabel.setText("Person Name");
+        add(patientNameJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
 
         AgeJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         AgeJLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         AgeJLabel.setText("Age");
+        add(AgeJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 108, -1));
+        add(pesonNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, 150, -1));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -92,81 +100,28 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, 100, 36));
 
         housejLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         housejLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         housejLabel.setText("House");
+        add(housejLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 150, 108, -1));
 
         communityjLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         communityjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         communityjLabel.setText("Community");
+        add(communityjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, 108, -1));
 
         cityjLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         cityjLabel.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         cityjLabel.setText("City");
+        add(cityjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 108, -1));
+        add(personhouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, 150, -1));
+        add(personcommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, 150, -1));
+        add(personcity, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 230, 150, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pesonNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personhouse, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personcommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personcity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45)
-                                .addComponent(addPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cityjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(communityjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(housejLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(AgeJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(patientNameJLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pesonNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(patientNameJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AgeJLabel)
-                    .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personhouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(housejLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personcommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(communityjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personcity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cityjLabel))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(415, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Person/personss.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 460));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addPersonJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPersonJButtonActionPerformed
@@ -226,6 +181,7 @@ public class CreatePersonJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel communityjLabel;
     private javax.swing.JLabel housejLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel patientNameJLabel;
     private javax.swing.JTextField personAgeJTextField;
     private javax.swing.JTextField personcity;

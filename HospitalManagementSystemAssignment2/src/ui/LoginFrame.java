@@ -51,9 +51,9 @@ public class LoginFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         userName = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         password = new javax.swing.JPasswordField();
+        jLabel8 = new javax.swing.JLabel();
         rolesPanel = new javax.swing.JPanel();
         accounts = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
@@ -76,26 +76,26 @@ public class LoginFrame extends javax.swing.JFrame {
 
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        jPanel1.setBackground(new java.awt.Color(153, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Welcome to BGS Global Hospitals");
+        jLabel1.setText("        Welcome to BGS Global Hospitals");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(171, 171, 171)
+                .addGap(215, 215, 215)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(366, Short.MAX_VALUE))
+                .addContainerGap(1218, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addGap(16, 16, 16))
         );
 
         jSplitPane1.setTopComponent(jPanel1);
@@ -103,36 +103,22 @@ public class LoginFrame extends javax.swing.JFrame {
         Parent.setLayout(new java.awt.CardLayout());
 
         loginPanel.setBackground(new java.awt.Color(204, 204, 204));
-        loginPanel.setLayout(null);
+        loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel3.setText("  Password:");
-        loginPanel.add(jLabel3);
-        jLabel3.setBounds(292, 190, 100, 30);
+        loginPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 280, 150, 30));
 
-        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel4.setText("UserName:");
-        loginPanel.add(jLabel4);
-        jLabel4.setBounds(292, 133, 100, 30);
+        loginPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 210, 150, 30));
 
         userName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userNameActionPerformed(evt);
             }
         });
-        loginPanel.add(userName);
-        userName.setBounds(440, 130, 230, 30);
-
-        jButton4.setBackground(new java.awt.Color(0, 102, 102));
-        jButton4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jButton4.setText("Reset");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        loginPanel.add(jButton4);
-        jButton4.setBounds(330, 260, 100, 28);
+        loginPanel.add(userName, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 210, 230, 30));
 
         jButton5.setBackground(new java.awt.Color(0, 102, 102));
         jButton5.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
@@ -142,16 +128,18 @@ public class LoginFrame extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        loginPanel.add(jButton5);
-        jButton5.setBounds(480, 260, 90, 28);
+        loginPanel.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 380, 120, 40));
 
         password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 passwordActionPerformed(evt);
             }
         });
-        loginPanel.add(password);
-        password.setBounds(440, 190, 230, 30);
+        loginPanel.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 280, 230, 30));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui/doctor-stethoscope-hand-hospital-background-gown-94227568.jpg"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        loginPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1460, 670));
 
         Parent.add(loginPanel, "card2");
 
@@ -159,14 +147,14 @@ public class LoginFrame extends javax.swing.JFrame {
 
         accounts.setBackground(new java.awt.Color(0, 102, 102));
         accounts.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        accounts.setText("Manage Directories");
+        accounts.setText("SystemAdmin");
         accounts.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accountsActionPerformed(evt);
             }
         });
 
-        btnBack.setBackground(new java.awt.Color(153, 153, 153));
+        btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -175,6 +163,8 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
+        btnHospitalAdmin.setBackground(new java.awt.Color(0, 102, 102));
+        btnHospitalAdmin.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         btnHospitalAdmin.setText("Hospital Admin");
         btnHospitalAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,30 +177,28 @@ public class LoginFrame extends javax.swing.JFrame {
         rolesPanelLayout.setHorizontalGroup(
             rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rolesPanelLayout.createSequentialGroup()
-                .addGap(78, 78, 78)
+                .addGap(76, 76, 76)
                 .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnHospitalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(accounts))
-                .addContainerGap(721, Short.MAX_VALUE))
-            .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rolesPanelLayout.createSequentialGroup()
-                    .addContainerGap(423, Short.MAX_VALUE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(458, Short.MAX_VALUE)))
+                    .addComponent(btnHospitalAdmin, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(accounts, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(1263, 1263, 1263)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         rolesPanelLayout.setVerticalGroup(
             rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rolesPanelLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(accounts)
-                .addGap(95, 95, 95)
-                .addComponent(btnHospitalAdmin)
-                .addContainerGap(393, Short.MAX_VALUE))
-            .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rolesPanelLayout.createSequentialGroup()
-                    .addContainerGap(279, Short.MAX_VALUE)
-                    .addComponent(btnBack)
-                    .addContainerGap(279, Short.MAX_VALUE)))
+                .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(rolesPanelLayout.createSequentialGroup()
+                        .addGap(666, 666, 666)
+                        .addComponent(btnBack))
+                    .addGroup(rolesPanelLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(btnHospitalAdmin))
+                    .addGroup(rolesPanelLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(accounts)))
+                .addContainerGap(359, Short.MAX_VALUE))
         );
 
         Parent.add(rolesPanel, "card3");
@@ -320,10 +308,10 @@ public class LoginFrame extends javax.swing.JFrame {
                         .addComponent(mUpdate)
                         .addGap(39, 39, 39)
                         .addComponent(mDelete)
-                        .addGap(0, 396, Short.MAX_VALUE))))
+                        .addGap(0, 1291, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mAccountsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 975, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1871, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(mAccountsLayout.createSequentialGroup()
                 .addGap(419, 419, 419)
@@ -357,7 +345,7 @@ public class LoginFrame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(jButton1)
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(549, Short.MAX_VALUE))
         );
 
         Parent.add(mAccounts, "card4");
@@ -379,10 +367,6 @@ public class LoginFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
@@ -623,7 +607,6 @@ public class LoginFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnHospitalAdmin;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -631,6 +614,7 @@ public class LoginFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane1;

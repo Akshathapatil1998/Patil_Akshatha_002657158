@@ -76,8 +76,10 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         deletePersonJButton = new javax.swing.JButton();
         searchBoxJTextField = new javax.swing.JTextField();
         createPersonJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         searchPersonJButton.setBackground(new java.awt.Color(0, 102, 102));
         searchPersonJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -87,6 +89,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 searchPersonJButtonActionPerformed(evt);
             }
         });
+        add(searchPersonJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 180, 33));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,6 +99,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 100, 32));
 
         refreshJButton.setBackground(new java.awt.Color(0, 102, 102));
         refreshJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,6 +109,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 refreshJButtonActionPerformed(evt);
             }
         });
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 200, 100, 36));
 
         viewPersonsJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -124,9 +129,12 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(viewPersonsJTable);
 
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 47, 960, 130));
+
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage People");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(111, 6, 482, -1));
 
         viewPersonJButton.setBackground(new java.awt.Color(0, 102, 102));
         viewPersonJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -136,6 +144,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 viewPersonJButtonActionPerformed(evt);
             }
         });
+        add(viewPersonJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 200, 120, 36));
 
         deletePersonJButton.setBackground(new java.awt.Color(0, 102, 102));
         deletePersonJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -145,12 +154,14 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 deletePersonJButtonActionPerformed(evt);
             }
         });
+        add(deletePersonJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, -1, 36));
 
         searchBoxJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchBoxJTextFieldActionPerformed(evt);
             }
         });
+        add(searchBoxJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 161, 33));
 
         createPersonJButton.setBackground(new java.awt.Color(0, 102, 102));
         createPersonJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -160,61 +171,10 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 createPersonJButtonActionPerformed(evt);
             }
         });
+        add(createPersonJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, -1, 36));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                        .addComponent(createPersonJButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(viewPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
-                        .addComponent(deletePersonJButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(150, 150, 150)))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(searchPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(createPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deletePersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(36, 36, 36)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(searchPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(257, 257, 257))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Person/persons.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 640));
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchPersonJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchPersonJButtonActionPerformed
@@ -299,6 +259,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton createPersonJButton;
     private javax.swing.JButton deletePersonJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton refreshJButton;
     private javax.swing.JTextField searchBoxJTextField;

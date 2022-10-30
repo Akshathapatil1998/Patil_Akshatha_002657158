@@ -75,20 +75,27 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
         personcommunity = new javax.swing.JTextField();
         personcity = new javax.swing.JTextField();
         cityjLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 255));
         setMinimumSize(new java.awt.Dimension(500, 700));
         setPreferredSize(new java.awt.Dimension(500, 700));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         AgeJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         AgeJLabel.setText("Age");
+        add(AgeJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 100, 122, -1));
+        add(personNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 60, 150, -1));
+        add(personAgeJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 150, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Person Details");
+        jLabel1.setText("Patient Details");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 375, -1));
 
         patientNameJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         patientNameJLabel.setText("Patient Name");
+        add(patientNameJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 122, -1));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,6 +105,7 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 100, 33));
 
         editJButton.setBackground(new java.awt.Color(0, 102, 102));
         editJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,6 +115,7 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
                 editJButtonActionPerformed(evt);
             }
         });
+        add(editJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, 100, 33));
 
         saveJButton.setBackground(new java.awt.Color(0, 102, 102));
         saveJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -116,85 +125,25 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
                 saveJButtonActionPerformed(evt);
             }
         });
+        add(saveJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 100, 36));
 
         housejLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         housejLabel.setText("House");
+        add(housejLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 122, -1));
+        add(personhouse, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 150, -1));
 
         communityjLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         communityjLabel.setText("Community");
+        add(communityjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 122, -1));
+        add(personcommunity, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 180, 150, -1));
+        add(personcity, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, 150, -1));
 
         cityjLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         cityjLabel.setText("City");
+        add(cityjLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 122, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(AgeJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(patientNameJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)
-                            .addComponent(housejLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(communityjLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(cityjLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(personcommunity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personhouse, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(personcity, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(saveJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(98, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(patientNameJLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(personAgeJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AgeJLabel))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(personhouse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(housejLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(personcommunity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(communityjLabel, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(personcity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cityjLabel))
-                .addGap(28, 28, 28)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(editJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(saveJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(430, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Person/peoplesss.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -250, 850, 1080));
     }// </editor-fold>//GEN-END:initComponents
 
     private void editJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editJButtonActionPerformed
@@ -260,6 +209,7 @@ public class ViewUpdatePersonDetailsJPanel extends javax.swing.JPanel {
     private javax.swing.JButton editJButton;
     private javax.swing.JLabel housejLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel patientNameJLabel;
     private javax.swing.JTextField personAgeJTextField;
     private javax.swing.JTextField personNameJTextField;

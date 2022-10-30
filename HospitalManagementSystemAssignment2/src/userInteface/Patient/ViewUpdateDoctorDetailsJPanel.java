@@ -101,7 +101,7 @@ public class ViewUpdateDoctorDetailsJPanel extends javax.swing.JPanel {
         primaryDocNameJLabel.setText("Doctor Assigned");
 
         patientIDJLabel.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        patientIDJLabel.setText("Patient ID");
+        patientIDJLabel.setText("Doctor ID");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -157,7 +157,7 @@ public class ViewUpdateDoctorDetailsJPanel extends javax.swing.JPanel {
             doctor.setDoctorID(patientIDJTextField.getText());
             doctor.setPrimaryDoctorName(primaryDocNameJTextField.getText());
 
-            JOptionPane.showMessageDialog(this, "Patient updated!!", "Update",
+            JOptionPane.showMessageDialog(this, "Doctor updated!!", "Update",
                 JOptionPane.INFORMATION_MESSAGE);
             modifyTextFields(false);
         } else {

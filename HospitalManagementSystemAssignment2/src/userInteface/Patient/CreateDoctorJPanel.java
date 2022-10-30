@@ -54,17 +54,23 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         primaryDocNameJLabel = new javax.swing.JLabel();
         patientIDJTextField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(500, 700));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         primaryDocNameJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 primaryDocNameJTextFieldActionPerformed(evt);
             }
         });
+        jPanel1.add(primaryDocNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 150, -1));
 
         addPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
+        addPatientJButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         addPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
         addPatientJButton.setText("Add Doctor");
         addPatientJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -72,18 +78,27 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
                 addPatientJButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(addPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 130, 39));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(242, 242, 242));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Doctor Details");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 450, -1));
 
-        patientIDJLabel.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        patientIDJLabel.setText("Doctor ID");
+        patientIDJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        patientIDJLabel.setForeground(new java.awt.Color(242, 242, 242));
+        patientIDJLabel.setText("Doctor ID:");
+        jPanel1.add(patientIDJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 100, -1));
 
-        primaryDocNameJLabel.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        primaryDocNameJLabel.setText("Patient Assigned");
+        primaryDocNameJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        primaryDocNameJLabel.setForeground(new java.awt.Color(242, 242, 242));
+        primaryDocNameJLabel.setText("Patient Assigned:");
+        jPanel1.add(primaryDocNameJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
+        jPanel1.add(patientIDJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 150, -1));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
+        backJButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -91,71 +106,13 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 177, 100, 39));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(113, 113, 113)
-                        .addComponent(addPatientJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(primaryDocNameJLabel)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(primaryDocNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(patientIDJLabel)
-                            .addGap(243, 243, 243)
-                            .addComponent(patientIDJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(patientIDJLabel)
-                    .addComponent(patientIDJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(primaryDocNameJLabel)
-                    .addComponent(primaryDocNameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addPatientJButton)
-                    .addComponent(backJButton))
-                .addContainerGap(561, Short.MAX_VALUE))
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Patient/pexels-vidal-balielo-jr-3376790.jpg"))); // NOI18N
+        jLabel3.setText("jLabel3");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 1, 640, 1090));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 496, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 705, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void primaryDocNameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_primaryDocNameJTextFieldActionPerformed
@@ -172,7 +129,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
 
             //Adding Patient to Person
             doctor.setDoctor(doctor);
-            JOptionPane.showMessageDialog(this, "Patient added!!", "Update",
+            JOptionPane.showMessageDialog(this, "Doctor added!!", "Update",
                 JOptionPane.INFORMATION_MESSAGE);
             clearFields();
         }
@@ -213,6 +170,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JButton addPatientJButton;
     private javax.swing.JButton backJButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel patientIDJLabel;
     private javax.swing.JTextField patientIDJTextField;

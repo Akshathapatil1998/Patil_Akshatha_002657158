@@ -46,7 +46,9 @@ public class MainJFrame extends javax.swing.JFrame {
         managePersonsJButton = new javax.swing.JButton();
         manageVitalSigns = new javax.swing.JButton();
         DoctorManagerJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
         userProcessContainer = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(700, 500));
@@ -57,6 +59,7 @@ public class MainJFrame extends javax.swing.JFrame {
         leftJPanel.setBackground(new java.awt.Color(204, 204, 255));
         leftJPanel.setMinimumSize(new java.awt.Dimension(200, 700));
         leftJPanel.setPreferredSize(new java.awt.Dimension(200, 700));
+        leftJPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         patientManagerJButton.setBackground(new java.awt.Color(0, 102, 102));
         patientManagerJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -66,6 +69,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 patientManagerJButtonActionPerformed(evt);
             }
         });
+        leftJPanel.add(patientManagerJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 292, 132, 40));
 
         managePersonsJButton.setBackground(new java.awt.Color(0, 102, 102));
         managePersonsJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,6 +79,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 managePersonsJButtonActionPerformed(evt);
             }
         });
+        leftJPanel.add(managePersonsJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 193, 132, 40));
 
         manageVitalSigns.setBackground(new java.awt.Color(0, 102, 102));
         manageVitalSigns.setForeground(new java.awt.Color(255, 255, 255));
@@ -84,6 +89,7 @@ public class MainJFrame extends javax.swing.JFrame {
                 manageVitalSignsActionPerformed(evt);
             }
         });
+        leftJPanel.add(manageVitalSigns, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 455, -1, 40));
 
         DoctorManagerJButton.setBackground(new java.awt.Color(0, 102, 102));
         DoctorManagerJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -93,33 +99,10 @@ public class MainJFrame extends javax.swing.JFrame {
                 DoctorManagerJButtonActionPerformed(evt);
             }
         });
+        leftJPanel.add(DoctorManagerJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 375, 132, 40));
 
-        javax.swing.GroupLayout leftJPanelLayout = new javax.swing.GroupLayout(leftJPanel);
-        leftJPanel.setLayout(leftJPanelLayout);
-        leftJPanelLayout.setHorizontalGroup(
-            leftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leftJPanelLayout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addGroup(leftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(patientManagerJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(managePersonsJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(manageVitalSigns, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DoctorManagerJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(38, 38, 38))
-        );
-        leftJPanelLayout.setVerticalGroup(
-            leftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(leftJPanelLayout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
-                .addComponent(managePersonsJButton)
-                .addGap(76, 76, 76)
-                .addComponent(patientManagerJButton)
-                .addGap(60, 60, 60)
-                .addComponent(DoctorManagerJButton)
-                .addGap(57, 57, 57)
-                .addComponent(manageVitalSigns)
-                .addGap(222, 222, 222))
-        );
+        jLabel2.setBackground(new java.awt.Color(204, 204, 255));
+        leftJPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 700));
 
         jSplitPane1.setLeftComponent(leftJPanel);
 
@@ -127,6 +110,11 @@ public class MainJFrame extends javax.swing.JFrame {
         userProcessContainer.setMinimumSize(new java.awt.Dimension(500, 700));
         userProcessContainer.setPreferredSize(new java.awt.Dimension(500, 700));
         userProcessContainer.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/doctorss.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        userProcessContainer.add(jLabel1, "card2");
+
         jSplitPane1.setRightComponent(userProcessContainer);
 
         getContentPane().add(jSplitPane1, java.awt.BorderLayout.CENTER);
@@ -214,6 +202,8 @@ public class MainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton DoctorManagerJButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JPanel leftJPanel;
     private javax.swing.JButton managePersonsJButton;
