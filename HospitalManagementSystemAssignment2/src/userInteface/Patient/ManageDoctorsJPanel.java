@@ -26,7 +26,7 @@ public class ManageDoctorsJPanel extends javax.swing.JPanel {
      */
     private PersonDirectory personDirectory;
     private JPanel userProcessContainer1;
-    public ManageDoctorsJPanel() {
+    public ManageDoctorsJPanel(JPanel userProcessContainer1, PersonDirectory personDirectory ) {
         initComponents();
         this.userProcessContainer1 = userProcessContainer1;
         this.personDirectory= personDirectory;

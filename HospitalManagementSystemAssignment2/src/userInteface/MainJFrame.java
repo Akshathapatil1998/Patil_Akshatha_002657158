@@ -170,10 +170,10 @@ public class MainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         
        ManageDoctorsJPanel mdJPanel= 
-                new ManageDoctorsJPanel(JPanel userProcessContainer1,personDirectory);
-        userProcessContainer1.add("mdJPanel", mdJPanel);
-        CardLayout layout=(CardLayout) userProcessContainer1.getLayout();
-        layout.next(userProcessContainer1);
+                new ManageDoctorsJPanel(userProcessContainer,personDirectory);
+        userProcessContainer.add("mdJPanel", mdJPanel);
+        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
            
     }//GEN-LAST:event_DoctorManagerJButtonActionPerformed
     

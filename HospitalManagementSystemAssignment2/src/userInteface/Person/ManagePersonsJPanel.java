@@ -76,7 +76,6 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         deletePersonJButton = new javax.swing.JButton();
         searchBoxJTextField = new javax.swing.JTextField();
         createPersonJButton = new javax.swing.JButton();
-        btnUpdatePerson = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 255));
 
@@ -162,15 +161,6 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnUpdatePerson.setBackground(new java.awt.Color(0, 102, 102));
-        btnUpdatePerson.setForeground(new java.awt.Color(255, 255, 255));
-        btnUpdatePerson.setText("Update Person");
-        btnUpdatePerson.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdatePersonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -195,9 +185,7 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                         .addComponent(deletePersonJButton)
                         .addGap(18, 18, 18)
                         .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnUpdatePerson)
-                        .addGap(24, 24, 24)))
+                        .addGap(150, 150, 150)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addGap(132, 132, 132)
@@ -214,13 +202,13 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                    .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUpdatePerson, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(createPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(viewPersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(deletePersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(deletePersonJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(backJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,18 +289,6 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
     }//GEN-LAST:event_createPersonJButtonActionPerformed
 
-    private void btnUpdatePersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdatePersonActionPerformed
-        // TODO add your handling code here:
-        DefaultTableModel Person = (DefaultTableModel) viewPersonsJTable.getModel();
-        int selectedRowIndex =  viewPersonsJTable.getSelectedRow();
-       
-        if (selectedRowIndex<0){
-            JOptionPane.showMessageDialog(this, "Please select a Row to Update");
-            return;
-        }
-       
-    }//GEN-LAST:event_btnUpdatePersonActionPerformed
-
     private void searchBoxJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchBoxJTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_searchBoxJTextFieldActionPerformed
@@ -320,7 +296,6 @@ public class ManagePersonsJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnUpdatePerson;
     private javax.swing.JButton createPersonJButton;
     private javax.swing.JButton deletePersonJButton;
     private javax.swing.JLabel jLabel1;

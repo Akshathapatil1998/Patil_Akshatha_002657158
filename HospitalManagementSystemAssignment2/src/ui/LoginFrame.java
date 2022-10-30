@@ -6,11 +6,13 @@ package ui;
 
 
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.Roles;
 import model.UserAccount;
 import model.UserAccountDirectory;
+import userInteface.MainJFrame;
 
 /**
  *
@@ -55,6 +57,7 @@ public class LoginFrame extends javax.swing.JFrame {
         rolesPanel = new javax.swing.JPanel();
         accounts = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        btnHospitalAdmin = new javax.swing.JButton();
         mAccounts = new javax.swing.JPanel();
         mRoles = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
@@ -172,13 +175,22 @@ public class LoginFrame extends javax.swing.JFrame {
             }
         });
 
+        btnHospitalAdmin.setText("Hospital Admin");
+        btnHospitalAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHospitalAdminActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout rolesPanelLayout = new javax.swing.GroupLayout(rolesPanel);
         rolesPanel.setLayout(rolesPanelLayout);
         rolesPanelLayout.setHorizontalGroup(
             rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(rolesPanelLayout.createSequentialGroup()
                 .addGap(78, 78, 78)
-                .addComponent(accounts)
+                .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnHospitalAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(accounts))
                 .addContainerGap(721, Short.MAX_VALUE))
             .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rolesPanelLayout.createSequentialGroup()
@@ -191,7 +203,9 @@ public class LoginFrame extends javax.swing.JFrame {
             .addGroup(rolesPanelLayout.createSequentialGroup()
                 .addGap(47, 47, 47)
                 .addComponent(accounts)
-                .addContainerGap(511, Short.MAX_VALUE))
+                .addGap(95, 95, 95)
+                .addComponent(btnHospitalAdmin)
+                .addContainerGap(393, Short.MAX_VALUE))
             .addGroup(rolesPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, rolesPanelLayout.createSequentialGroup()
                     .addContainerGap(279, Short.MAX_VALUE)
@@ -497,6 +511,16 @@ public class LoginFrame extends javax.swing.JFrame {
         Parent.repaint();
         Parent.revalidate();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnHospitalAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalAdminActionPerformed
+        // TODO add your handling code here:
+          MainJFrame mjf=new MainJFrame();
+        mjf.setVisible(true);
+        mjf.pack();
+        mjf.setLocationRelativeTo(null);
+        mjf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.dispose();
+    }//GEN-LAST:event_btnHospitalAdminActionPerformed
         Boolean login = false;
     /**
      * @param args the command line arguments
@@ -597,6 +621,7 @@ public class LoginFrame extends javax.swing.JFrame {
     private javax.swing.JPanel Parent;
     private javax.swing.JButton accounts;
     private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnHospitalAdmin;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
