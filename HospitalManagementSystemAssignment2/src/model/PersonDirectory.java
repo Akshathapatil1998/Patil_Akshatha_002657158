@@ -64,4 +64,19 @@ public class PersonDirectory {
         }
         return searchPersonDirectory;
     }
+    public ArrayList<Person> searchDoctor(String key)
+    {
+        ArrayList<Person> searchDoctorDirectory = new ArrayList();
+        for(Person person: personDirectory)
+        {
+            if(person.getPersonName().toLowerCase().startsWith(key.toLowerCase()))
+            {
+                if(person.getPatient()!=null)
+                {
+                    searchDoctorDirectory.add(person);
+                }
+            }
+        }
+        return searchDoctorDirectory;
+    }
 }

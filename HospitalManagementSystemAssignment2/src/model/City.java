@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class City {
     private String Name;
     private int zipcode;
+    private String citycounty;
 
     public String getName() {
         return Name;

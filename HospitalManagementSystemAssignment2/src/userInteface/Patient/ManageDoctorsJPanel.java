@@ -1,10 +1,8 @@
 /*
-* To change this license header, choose License Headers in Project Properties.
-* To change this template file, choose Tools | Templates
-* and open the template in the editor.
-*/
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ */
 package userInteface.Patient;
-
 
 import java.awt.CardLayout;
 import java.util.ArrayList;
@@ -13,29 +11,31 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import model.MyStringVerifier;
-import model.Patient;
 import model.Person;
 import model.PersonDirectory;
+import model.Doctor;
 
-public class ManagePatientsJPanel extends javax.swing.JPanel {
-    
+/**
+ *
+ * @author Dell
+ */
+public class ManageDoctorsJPanel extends javax.swing.JPanel {
+
     /**
-     * Creates new form managePatientsJJPanel
+     * Creates new form ManageDoctorsJPanel
      */
     private PersonDirectory personDirectory;
-    private JPanel userProcessContainer;
-    
-    public ManagePatientsJPanel(JPanel userProcessContainer, PersonDirectory personDirectory) {
+    private JPanel userProcessContainer1;
+    public ManageDoctorsJPanel() {
         initComponents();
-        this.userProcessContainer = userProcessContainer;
+        this.userProcessContainer1 = userProcessContainer1;
         this.personDirectory= personDirectory;
         ArrayList<Person> personList = personDirectory.getPersonHistory();
         populatePatientsTable(personList);
         InputVerifier stringVerifier = new MyStringVerifier();
         searchBoxJTextField.setInputVerifier(stringVerifier);
     }
-    
-    private void populatePatientsTable(ArrayList<Person> personList) {
+private void populatePatientsTable(ArrayList<Person> personList) {
         DefaultTableModel model = (DefaultTableModel) viewPersonsJTable.getModel();
         model.setRowCount(0);
         if(personList.isEmpty())
@@ -49,9 +49,9 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
             row[0] = person;
             row[1]= person.getAge();
             row[3]= person.getPersoncity();
-            if(person.getPatient()!=null)
+            if(person.getDoctor()!=null)
             {
-                row[2] = person.getPatient().getPatientID();
+                row[2] = person.getDoctor().getDoctorID();
             }
             else
             {
@@ -61,8 +61,6 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
-    
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -72,74 +70,23 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        refreshJButton = new javax.swing.JButton();
+        backJButton = new javax.swing.JButton();
+        searchPatientJButton = new javax.swing.JButton();
+        searchBoxJTextField = new javax.swing.JTextField();
+        deletePatientJButton = new javax.swing.JButton();
+        viewPatientJButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         viewPersonsJTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        viewPatientJButton = new javax.swing.JButton();
-        deletePatientJButton = new javax.swing.JButton();
-        searchBoxJTextField = new javax.swing.JTextField();
-        searchPatientJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
-        refreshJButton = new javax.swing.JButton();
         createPatientJButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(204, 204, 255));
-        setMinimumSize(new java.awt.Dimension(500, 700));
-        setPreferredSize(new java.awt.Dimension(500, 700));
-
-        viewPersonsJTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Patient Name", "Age", "Patient ID", "City"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(viewPersonsJTable);
-        if (viewPersonsJTable.getColumnModel().getColumnCount() > 0) {
-            viewPersonsJTable.getColumnModel().getColumn(0).setResizable(false);
-            viewPersonsJTable.getColumnModel().getColumn(2).setResizable(false);
-        }
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Manage Patients");
-
-        viewPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
-        viewPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
-        viewPatientJButton.setText("View Patient");
-        viewPatientJButton.addActionListener(new java.awt.event.ActionListener() {
+        refreshJButton.setBackground(new java.awt.Color(0, 102, 102));
+        refreshJButton.setForeground(new java.awt.Color(255, 255, 255));
+        refreshJButton.setText("Refresh");
+        refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewPatientJButtonActionPerformed(evt);
-            }
-        });
-
-        deletePatientJButton.setBackground(new java.awt.Color(0, 102, 102));
-        deletePatientJButton.setForeground(new java.awt.Color(255, 255, 255));
-        deletePatientJButton.setText("Delete Patient");
-        deletePatientJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deletePatientJButtonActionPerformed(evt);
-            }
-        });
-
-        searchPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
-        searchPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
-        searchPatientJButton.setText("Search Patient");
-        searchPatientJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchPatientJButtonActionPerformed(evt);
+                refreshJButtonActionPerformed(evt);
             }
         });
 
@@ -152,18 +99,61 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
             }
         });
 
-        refreshJButton.setBackground(new java.awt.Color(0, 102, 102));
-        refreshJButton.setForeground(new java.awt.Color(255, 255, 255));
-        refreshJButton.setText("Refresh");
-        refreshJButton.addActionListener(new java.awt.event.ActionListener() {
+        searchPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
+        searchPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
+        searchPatientJButton.setText("Search Doctor");
+        searchPatientJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshJButtonActionPerformed(evt);
+                searchPatientJButtonActionPerformed(evt);
             }
         });
 
+        deletePatientJButton.setBackground(new java.awt.Color(0, 102, 102));
+        deletePatientJButton.setForeground(new java.awt.Color(255, 255, 255));
+        deletePatientJButton.setText("Delete Doctor");
+        deletePatientJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deletePatientJButtonActionPerformed(evt);
+            }
+        });
+
+        viewPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
+        viewPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
+        viewPatientJButton.setText("View Doctor");
+        viewPatientJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                viewPatientJButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Manage Doctors");
+
+        viewPersonsJTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Doctor Name", "Age", "Doctor ID", "City", "Hospital"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(viewPersonsJTable);
+
         createPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         createPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
-        createPatientJButton.setText("Create Patient");
+        createPatientJButton.setText("Create Doctor");
         createPatientJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createPatientJButtonActionPerformed(evt);
@@ -192,11 +182,11 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
                         .addComponent(deletePatientJButton)
                         .addGap(18, 18, 18)
                         .addComponent(refreshJButton, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(37, 37, 37)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 687, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -216,69 +206,9 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchPatientJButton)
                     .addComponent(searchBoxJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(465, Short.MAX_VALUE))
+                .addContainerGap(405, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void viewPatientJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPatientJButtonActionPerformed
-        // TODO add your handling code here:
-        int selectedRow= viewPersonsJTable.getSelectedRow();
-        if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a row from table.",
-                    "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
-        /*pass userProcessContainer and Patient*/
-        Patient patient= person.getPatient();
-        if(patient!=null)
-        {
-            ViewUpdatePatientDetailsJPanel vupdJPanel=
-                    new ViewUpdatePatientDetailsJPanel(userProcessContainer, patient,Boolean.FALSE);
-            userProcessContainer.add("vupdJPanel", vupdJPanel);
-            CardLayout layout=(CardLayout) userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(this, "Patient not created, "
-                    + "Please create Patient first.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-        
-    }//GEN-LAST:event_viewPatientJButtonActionPerformed
-
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-        // TODO add your handling code here:
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
-    private void deletePatientJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletePatientJButtonActionPerformed
-        // TODO add your handling code here:
-        int selectedRow= viewPersonsJTable.getSelectedRow();
-        if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(this, "Please select a row from table.",
-                    "Error", JOptionPane.INFORMATION_MESSAGE);
-            return;
-        }
-        Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
-        Patient patient=person.getPatient();
-        if(patient==null)
-        {
-            JOptionPane.showMessageDialog(this, "Patient not created. Cannot delete",
-                    "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        /*Ask confirmation*/
-        int flag= JOptionPane.showConfirmDialog(this, "Are you sure want to remove?",
-                "Warning", JOptionPane.YES_NO_OPTION);
-        if(flag==0)
-        {
-            person.setPatient(null);
-            populatePatientsTable(personDirectory.getPersonHistory());
-        }
-    }//GEN-LAST:event_deletePatientJButtonActionPerformed
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
         // TODO add your handling code here:
@@ -286,41 +216,100 @@ public class ManagePatientsJPanel extends javax.swing.JPanel {
         populatePatientsTable(personDirectory.getPersonHistory());
     }//GEN-LAST:event_refreshJButtonActionPerformed
 
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+        // TODO add your handling code here:
+        userProcessContainer1.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer1.getLayout();
+        layout.previous(userProcessContainer1);
+    }//GEN-LAST:event_backJButtonActionPerformed
+
     private void searchPatientJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchPatientJButtonActionPerformed
         // TODO add your handling code here:
         String key= searchBoxJTextField.getText().trim();
         if(key.length()==0)
         {
             JOptionPane.showMessageDialog(this, "Please enter key.", "Error",
-                    JOptionPane.ERROR_MESSAGE);
+                JOptionPane.ERROR_MESSAGE);
             return;
         }
-        ArrayList<Person> searchPatients;
-        searchPatients=personDirectory.searchPatient(key);
-        populatePatientsTable(searchPatients);
+        ArrayList<Person> searchDoctors;
+        searchDoctors=personDirectory.searchDoctor(key);
+        populatePatientsTable(searchDoctors);
     }//GEN-LAST:event_searchPatientJButtonActionPerformed
+
+    private void deletePatientJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletePatientJButtonActionPerformed
+        // TODO add your handling code here:
+        int selectedRow= viewPersonsJTable.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row from table.",
+                "Error", JOptionPane.INFORMATION_MESSAGE);
+            return;
+        }
+        Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
+        Doctor Doctor=person.getDoctor();
+        if(Doctor==null)
+        {
+            JOptionPane.showMessageDialog(this, "Patient not created. Cannot delete",
+                "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        /*Ask confirmation*/
+        int flag= JOptionPane.showConfirmDialog(this, "Are you sure want to remove?",
+            "Warning", JOptionPane.YES_NO_OPTION);
+        if(flag==0)
+        {
+            person.setDoctor(null);
+            populatePatientsTable(personDirectory.getPersonHistory());
+        }
+    }//GEN-LAST:event_deletePatientJButtonActionPerformed
+
+    private void viewPatientJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewPatientJButtonActionPerformed
+        // TODO add your handling code here:
+        int selectedRow= viewPersonsJTable.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(this, "Please select a row from table.",
+                "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
+        /*pass userProcessContainer and Patient*/
+        Doctor doctor= person.getDoctor();
+        if(doctor!=null)
+        {
+            ViewUpdateDoctorDetailsJPanel vuddJPanel= new ViewUpdateDoctorDetailsJPanel(userProcessContainer1, doctor,Boolean.FALSE);
+            userProcessContainer1.add("vuddJPanel", vuddJPanel);
+            CardLayout layout=(CardLayout) userProcessContainer1.getLayout();
+            layout.next(userProcessContainer1);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Patient not created, "
+                + "Please create Patient first.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
+    }//GEN-LAST:event_viewPatientJButtonActionPerformed
 
     private void createPatientJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createPatientJButtonActionPerformed
         // TODO add your handling code here:
         int selectedRow= viewPersonsJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(this, "Please select a row from table.",
-                    "Error", JOptionPane.INFORMATION_MESSAGE);
+                "Error", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
         Person person=(Person) viewPersonsJTable.getValueAt(selectedRow, 0);
         if(person.getPatient()!=null)
         {
             JOptionPane.showMessageDialog(this, "Paient already exists.","Error",
-                    JOptionPane.ERROR_MESSAGE);
+                JOptionPane.ERROR_MESSAGE);
             return;
         }
-        CreatePatientJPanel cpJPanel= new CreatePatientJPanel(userProcessContainer, person);
-        userProcessContainer.add("cpJPanel", cpJPanel);
-        CardLayout layout=(CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
+        CreateDoctorJPanel cdJPanel= new CreateDoctorJPanel(person,userProcessContainer1);
+        userProcessContainer1.add("cdJPanel", cdJPanel);
+        CardLayout layout=(CardLayout) userProcessContainer1.getLayout();
+        layout.next(userProcessContainer1);
     }//GEN-LAST:event_createPatientJButtonActionPerformed
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;

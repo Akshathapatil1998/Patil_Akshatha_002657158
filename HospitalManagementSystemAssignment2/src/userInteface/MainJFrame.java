@@ -7,7 +7,10 @@ package userInteface;
 
 
 import java.awt.CardLayout;
+import javax.swing.JPanel;
+import model.Person;
 import model.PersonDirectory;
+import userInteface.Patient.ManageDoctorsJPanel;
 import userInteface.Patient.ManagePatientsJPanel;
 import userInteface.Patient.ManageVitalSignsJPanel;
 import userInteface.Person.ManagePersonsJPanel;
@@ -19,6 +22,9 @@ public class MainJFrame extends javax.swing.JFrame {
      * Creates new form MainJFrame
      */
     private PersonDirectory personDirectory;
+ 
+       private JPanel userProcessContainer1;
+   
     public MainJFrame() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
@@ -162,7 +168,12 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void DoctorManagerJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoctorManagerJButtonActionPerformed
         // TODO add your handling code here:
-       
+        
+       ManageDoctorsJPanel mdJPanel= 
+                new ManageDoctorsJPanel(JPanel userProcessContainer1,personDirectory);
+        userProcessContainer1.add("mdJPanel", mdJPanel);
+        CardLayout layout=(CardLayout) userProcessContainer1.getLayout();
+        layout.next(userProcessContainer1);
            
     }//GEN-LAST:event_DoctorManagerJButtonActionPerformed
     

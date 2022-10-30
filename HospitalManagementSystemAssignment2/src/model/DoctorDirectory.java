@@ -27,10 +27,7 @@ public class DoctorDirectory {
     }
     
 
-public void addNewdoctor(String name, int doctorid,String gender,String department, String availability){
-  Doctor doctor=new Doctor( name, doctorid, gender,department,  availability);
-    DoctorList.add(doctor);
-    }
+
 
 }
     

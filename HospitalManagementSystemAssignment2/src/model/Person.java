@@ -12,6 +12,7 @@ package model;
 public class Person {
     private String personName;
     private int age;
+    private Doctor doctor;
     private Patient patient;
     private String personhouse;
     private String personcommunity;
@@ -63,6 +64,13 @@ public class Person {
     
     public void setPatient(Patient patient) {
         this.patient = patient;
+    }
+    public Doctor getDoctor() {
+        return doctor;
+    }
+    
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
     
     @Override
