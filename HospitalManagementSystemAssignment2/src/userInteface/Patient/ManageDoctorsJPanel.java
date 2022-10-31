@@ -92,7 +92,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 260, 100, 30));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, 100, 30));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,7 +102,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 100, 30));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 100, 30));
 
         searchPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         searchPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,8 +112,8 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 searchPatientJButtonActionPerformed(evt);
             }
         });
-        add(searchPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(425, 333, 120, 30));
-        add(searchBoxJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(229, 332, 130, 30));
+        add(searchPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 410, 120, 30));
+        add(searchBoxJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 180, 30));
 
         deletePatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         deletePatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -123,7 +123,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 deletePatientJButtonActionPerformed(evt);
             }
         });
-        add(deletePatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 110, 30));
+        add(deletePatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 310, 110, 30));
 
         viewPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         viewPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -133,12 +133,12 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 viewPatientJButtonActionPerformed(evt);
             }
         });
-        add(viewPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 120, 30));
+        add(viewPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 120, 30));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Doctors");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 490, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 490, -1));
 
         viewPersonsJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -161,7 +161,7 @@ private void populatePatientsTable(ArrayList<Person> personList) {
         });
         jScrollPane1.setViewportView(viewPersonsJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 840, 170));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 940, 170));
 
         createPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         createPatientJButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,10 +171,10 @@ private void populatePatientsTable(ArrayList<Person> personList) {
                 createPatientJButtonActionPerformed(evt);
             }
         });
-        add(createPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, 30));
+        add(createPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, -1, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Patient/doctorss.jpg"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 640));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 640));
     }// </editor-fold>//GEN-END:initComponents
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed

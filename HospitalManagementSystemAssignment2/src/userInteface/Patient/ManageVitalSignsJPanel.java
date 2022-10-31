@@ -286,7 +286,7 @@ public class ManageVitalSignsJPanel extends javax.swing.JPanel {
         add(refreshPatientsJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Patient/personal-vital-signs-monitor-3200173.jpg"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 990, 690));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 810, 690));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

@@ -67,7 +67,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
                 primaryDocNameJTextFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(primaryDocNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 150, -1));
+        jPanel1.add(primaryDocNameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, 150, -1));
 
         addPatientJButton.setBackground(new java.awt.Color(0, 102, 102));
         addPatientJButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -78,24 +78,24 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
                 addPatientJButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(addPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 180, 130, 39));
+        jPanel1.add(addPatientJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, 130, 39));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(242, 242, 242));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Doctor Details");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 450, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 50, 450, -1));
 
         patientIDJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         patientIDJLabel.setForeground(new java.awt.Color(242, 242, 242));
         patientIDJLabel.setText("Doctor ID:");
-        jPanel1.add(patientIDJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 100, -1));
+        jPanel1.add(patientIDJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 100, -1));
 
         primaryDocNameJLabel.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         primaryDocNameJLabel.setForeground(new java.awt.Color(242, 242, 242));
         primaryDocNameJLabel.setText("Patient Assigned:");
-        jPanel1.add(primaryDocNameJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, -1, -1));
-        jPanel1.add(patientIDJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 150, -1));
+        jPanel1.add(primaryDocNameJLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 180, -1, -1));
+        jPanel1.add(patientIDJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 150, -1));
 
         backJButton.setBackground(new java.awt.Color(0, 102, 102));
         backJButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -106,11 +106,11 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 177, 100, 39));
+        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 100, 39));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Patient/pexels-vidal-balielo-jr-3376790.jpg"))); // NOI18N
         jLabel3.setText("jLabel3");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 1, 640, 1090));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 1, 1390, 1090));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents

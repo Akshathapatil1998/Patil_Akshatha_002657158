@@ -113,7 +113,7 @@ public class CreateVitalSignJPanel extends javax.swing.JPanel {
         add(backJButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 490, 100, 36));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/userInteface/Patient/vitals.jpg"))); // NOI18N
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 840, 700));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1200, 700));
     }// </editor-fold>//GEN-END:initComponents
 
     private void saveJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveJButtonActionPerformed
